@@ -5,7 +5,8 @@ import Contact from "./Component/Contact";
 import Corporate from "./Component/Corporate";
 import Governance from "./Component/Governance";
 import Layout from "./Component/Layout";
-import Users from "./Component/User";
+import Repos from "./Component/Repos";
+import ErrorTest from "./Component/Errortestpage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
           <Route path="governance" element={<Governance />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/repos" element={<Repos />} />
+        <Route path="repo/:repoId" element={<Repos />} />
+        <Route path="/error-test-page" element={<ErrorTest />} />
         <Route path="*" element={<div><h1>404 Page</h1></div>} />
       </Routes>
     </div>
