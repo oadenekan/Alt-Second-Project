@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import RepoDetails from './RepoDetails';
 
 export default function Repos() {
   const [user, setUser] = useState([]);
@@ -14,33 +15,34 @@ export default function Repos() {
       setLoading(false);
     }
     fetchUsers();
-
-    // Cleanup function
-    // return () => {
-    //   prevStateUpdate.current = true;
-    // };
   }, []);
-// console.log(user,'user')
 
-  const PER_PAGE = 5;
-  const total = user?.length;
+  const PER_PAGE = 10;
+  const total = user.length;
   const pages = Math.ceil(total/PER_PAGE);
   const skip = page * PER_PAGE - PER_PAGE;
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-//   if (!loading && error) {
-//     return <p>Error</p>;
-//   }
-
+  // if (loading) {
+  //   <p>Loading...</p>;
+  // }
   return (
-    <div>
-      <h1>MY GITHUB REPOSITORY</h1>
+    <div className="content">
+      <h1>MY GITHUB REPOSITORIES</h1>
       <ol>
-      {user?.slice(skip, skip + PER_PAGE).map((repo, index) => (<li key={index}><Link to={`repo/${index+1}`}>{repo.html_url}</Link></li>))}
+      {
+        user? user.slice(skip, skip + PER_PAGE).map((repo, index) => {
+          return (
+            <li key={index} className="repo-link">
+              <Link to={`/${repo.name}`}>{repo.html_url}</Link>
+            </li>
+          )
+        })
+        :
+        loading && <p>Loading...</p>
+    }
       </ol>
+      <RepoDetails details={user}/>
+
     <div className='button-nav'>
         {
           <button

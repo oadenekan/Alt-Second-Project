@@ -19,9 +19,9 @@ export default function Counter() {
     <div className="App">
       <p>React Counter With Reducer to demonstrate error boundary if counter decrease to -1</p>
       <h1>{count}</h1>
-      <button onClick={() => dispatch("increment")}>Increment</button>
-      <button onClick={() => dispatch("decrement")}>Decrement</button>
-      <button onClick={() => dispatch("reset")}>Reset</button>
+      <button className="counter-btn" style={{"backgroundColor" : "green"}} onClick={() => dispatch("increment")}>Increment</button>
+      <button className="counter-btn" style={{"backgroundColor" : "#ffe"}} onClick={() => dispatch("decrement")}>Decrement</button>
+      <button className="counter-btn" style={{"backgroundColor" : "grey"}} onClick={() => dispatch("reset")}>Reset</button>
     </div>
   );
 }

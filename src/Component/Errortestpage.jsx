@@ -3,7 +3,7 @@ import Counter from './Counter';
 
 const ErrorTest = () => {
   return (
-    <div>
+    <div className="content">
       <h2>Test Page for Error Boundary </h2> 
       <Counter />
 </div>

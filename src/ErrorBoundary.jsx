@@ -25,6 +25,7 @@ class ErrorBoundary extends React.Component {
       // Error path
       return (
         <div>
+          <p>Click <a href="/">Here</a> To Go Back Home</p>
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
@@ -34,7 +35,6 @@ class ErrorBoundary extends React.Component {
         </div>
       );
     }
-
     return this.props.children;
 }
 }
