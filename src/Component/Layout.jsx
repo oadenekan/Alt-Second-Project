@@ -18,6 +18,7 @@ const Layout = () => {
         className="hamburger"
         onClick={() => {
           setIsNavExpanded(!isNavExpanded);
+          console.log(!isNavExpanded);
         }}
       >
         {/* icon from Heroicons.com */}
@@ -41,19 +42,19 @@ const Layout = () => {
       > 
         <ul>
           <li>
-            <CustomNavLink to="/" end> Home </CustomNavLink>
+            <CustomNavLink to="/" onClick={(() => {setIsNavExpanded(!isNavExpanded)})} end> Home </CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="about"> About </CustomNavLink>
+            <CustomNavLink to="/about" onClick={(() => {setIsNavExpanded(!isNavExpanded)})}> About </CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="contact"> Contact </CustomNavLink>
+            <CustomNavLink to="/contact" onClick={(() => {setIsNavExpanded(!isNavExpanded)})}> Contact </CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="repos"> Repositories </CustomNavLink>
+            <CustomNavLink to="/repos" onClick={(() => {setIsNavExpanded(!isNavExpanded)})}> Repositories </CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="error-test-page"> Error Test Page </CustomNavLink>
+            <CustomNavLink to="/error-test-page" onClick={(() => {setIsNavExpanded(!isNavExpanded)})}> Error Test Page </CustomNavLink>
           </li>
         </ul>  
       </div>

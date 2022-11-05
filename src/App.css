@@ -71,7 +71,6 @@ td, th {
 
 .navigation-menu li :hover {
   background: grey;
-  padding: .3rem;
 }
 
 .navigation-menu ul {
@@ -114,6 +113,29 @@ td, th {
   background-color: #2642af;
 }
 
+ul {
+  list-style: none;
+}
+
+.content {
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 30px;
+}
+
+.social-links {
+  text-decoration: none;
+}
+
+.repo-link {
+  padding: .2rem;
+}
+
+.contact-list {
+  padding-left: 0px;
+}
+
 @media screen and (max-width: 550px) {
   .hamburger {
     display: block;
@@ -149,23 +171,4 @@ td, th {
   .navigation-menu.expanded ul {
     display: block;
   }
-}
-
-ul {
-  list-style: none;
-}
-
-.content {
-  text-align: center;
-  margin: 0 auto;
-  width: 50%;
-  padding: 30px;
-}
-
-.social-links {
-  text-decoration: none;
-}
-
-.repo-link {
-  padding: .2rem;
 }

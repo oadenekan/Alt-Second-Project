@@ -27,6 +27,10 @@ export default function RepoDetails() {
             <span>{details.name}</span>
           </div>
           <div>
+            <label>Url: </label>
+            <span>{details.html_url}</span>
+          </div>
+          <div>
             <label>Languaue: </label>
             <span>{details.created_at}</span>
           </div>

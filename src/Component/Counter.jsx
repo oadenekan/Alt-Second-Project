@@ -21,7 +21,7 @@ export default function Counter() {
       <h1>{count}</h1>
       <button className="counter-btn" style={{"backgroundColor" : "green"}} onClick={() => dispatch("increment")}>Increment</button>
       <button className="counter-btn" style={{"backgroundColor" : "#ffe"}} onClick={() => dispatch("decrement")}>Decrement</button>
-      <button className="counter-btn" style={{"backgroundColor" : "grey"}} onClick={() => dispatch("reset")}>Reset</button>
+      <button className="counter-btn" style={{"backgroundColor" : "grey", "width": "112.21px"}} onClick={() => dispatch("reset")}>Reset</button>
     </div>
   );
 }

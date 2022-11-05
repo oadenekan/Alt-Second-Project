@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="content">
       <h2>My Professional And Social Media Links</h2>
-      <ul>
+      <ul className="contact-list">
         <li>
           <a href="https://github.com/oadenekan" target='_blank' rel="noreferrer" className="social-links">
             <span>Github Profile Page</span>

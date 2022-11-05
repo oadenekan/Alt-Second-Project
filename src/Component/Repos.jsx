@@ -28,7 +28,7 @@ export default function Repos() {
   return (
     <div className="content">
       <h1>MY GITHUB REPOSITORIES</h1>
-      <ol>
+      <ol className="contact-list">
       {
         user? user.slice(skip, skip + PER_PAGE).map((repo, index) => {
           return (
