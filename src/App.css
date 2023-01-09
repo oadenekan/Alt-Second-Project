@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #888;
+  background-color: #f5f5f5;
   height: 100%;
 }
 
@@ -11,6 +11,24 @@ td, th {
     border: 1px solid #ddd;
     padding: 8px;
   }
+
+.page-link {
+  background-color: #a9a9a9 !important;
+}
+
+.repo-btn-nav {
+  text-align: left;
+}
+
+.repo-btn-nav button {
+  background-color : #D3D3D3; 
+  width: 112.21px;
+}
+
+.repo-btn-nav button:hover {
+  background-color : #a9a9a9; 
+  width: 112.21px;
+}
 
 .button-nav {
   display: flex;
@@ -38,7 +56,7 @@ td, th {
 }
 
 .button-nav > button:hover{
-  background: lightcoral;
+  background: #d5d5d5;
 }
 
 .about-nested-wrapper {
@@ -59,7 +77,7 @@ td, th {
 
 .brand-name {
   text-decoration: none;
-  color: black;
+  color: #000000;
   font-size: 1.3rem;
   margin-left: 1rem;
 }
@@ -67,10 +85,7 @@ td, th {
 .navigation-menu {
   margin-left: auto;
   margin-right: 1rem;
-}
-
-.navigation-menu li :hover {
-  background: grey;
+  padding: 1rem;
 }
 
 .navigation-menu ul {
@@ -83,10 +98,15 @@ td, th {
   margin: 0 1rem;
 }
 
+.navigation-menu li :hover {
+  background: #d5d5d5;
+}
+
 .navigation-menu li a {
   text-decoration: none;
   display: block;
   width: 100%;
+  padding:0.5rem;
 }
 
 .navigation-menu a {
@@ -99,7 +119,7 @@ td, th {
   width: 40px;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: #283b8b;
+  background-color: #d5d5d5;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -109,8 +129,12 @@ td, th {
   display: none;
 }
 
+.active {
+  background-color: #a9a9a9;
+}
+
 .hamburger:hover {
-  background-color: #2642af;
+  background-color: #a9a9a9;
 }
 
 ul {
@@ -146,8 +170,8 @@ ul {
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
-    height: calc(100vh - 60px);
+    width: 100vw;
+    height: calc(100vh - 90px);
     background-color: white;
     border-top: 1px solid black;
     display: none;

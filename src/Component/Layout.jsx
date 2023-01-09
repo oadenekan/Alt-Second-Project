@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const CustomNavLink = ({to, ...props}) => {
   return (
-    <NavLink className="layout-nav" style={({ isActive }) => ({color: isActive ? 'red' : 'black'})} to={to} {...props}></NavLink>
+    <NavLink className="layout-nav" style={({ isActive }) => ({color: isActive ? '#ffffff' : '#000000'})} to={to} {...props}></NavLink>
   );
 };
 
@@ -18,7 +18,6 @@ const Layout = () => {
         className="hamburger"
         onClick={() => {
           setIsNavExpanded(!isNavExpanded);
-          console.log(!isNavExpanded);
         }}
       >
         {/* icon from Heroicons.com */}

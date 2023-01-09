@@ -28,19 +28,28 @@ export default function Repos() {
   return (
     <div className="content">
       <h1>MY GITHUB REPOSITORIES</h1>
-      <ol className="contact-list">
+      {/*<ol className="contact-list">*/}
       {
         user? user.slice(skip, skip + PER_PAGE).map((repo, index) => {
           return (
-            <li key={index} className="repo-link">
-              <Link to={`/${repo.name}`}>{repo.html_url}</Link>
-            </li>
+            <React.Fragment>
+              <div>
+                <div style={{"display":"inline-block","margin-right":"5px"}}>
+                  <p>{skip + 1 + index}. </p>
+                </div>
+                <div style={{"display":"inline-block"}}>
+                  <p key={index} className="repo-link">
+                    <Link to={`/${repo.name}`}>{repo.html_url}</Link>
+                  </p>
+                </div>
+              </div>
+            </React.Fragment>
           )
         })
         :
         loading && <p>Loading...</p>
     }
-      </ol>
+      {/*</ol>*/}
       <RepoDetails details={user}/>
 
     <div className='button-nav'>
@@ -54,7 +63,7 @@ export default function Repos() {
         }
         {Array.from({ length: pages }, (value, index) => index + 1).map(
           (each, index) => (
-            <button key={index} onClick={() => setPage(each)}>{each}</button>
+            <button key={index} onClick={() => setPage(each)} className={`${each === page ? "page-link" : ""}`}>{each}</button>
           )
         )}
         {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 export default function RepoDetails() {
   const [details, setDetails] = useState([]);
@@ -21,6 +21,11 @@ export default function RepoDetails() {
         <p></p>
       ) : (
         <div>
+          <Link to="/repos">
+            <div className="repo-btn-nav">
+              <button className="counter-btn">Back</button>
+            </div>
+          </Link>
           <h2>{details.name.toUpperCase()} REPOSITORY DETAILS</h2>
           <div>
             <label>Name: </label>
